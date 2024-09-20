@@ -1,0 +1,30 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Mon May 27 09:25:02 2024
+| Host         : DESKTOP-U76F263 running 64-bit major release  (build 9200)
+| Command      : report_drc -file calc_top_struc_cfg_drc_opted.rpt
+| Design       : calc_top_struc_cfg
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 0
+
+2. REPORT DETAILS
+-----------------
+

@@ -1,0 +1,597 @@
+
+*** Running vivado
+    with args -log calc_top_struc_cfg.vds -m64 -mode batch -messageDb vivado.pb -notrace -source calc_top_struc_cfg.tcl
+
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source calc_top_struc_cfg.tcl -notrace
+Command: synth_design -top calc_top_struc_cfg -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8064 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 266.480 ; gain = 59.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'calc_top_struc_cfg' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/calc_top_struc_cfg.vhd:38]
+INFO: [Synth 8-3491] module 'io_ctrl' declared at 'C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/io_ctrl_.vhd:41' bound to instance 'i_io_ctrl' of component 'io_ctrl' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/calc_top_struc.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'io_ctrl' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/io_ctrl_rtl.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'io_ctrl' (1#1) [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/io_ctrl_rtl.vhd:43]
+INFO: [Synth 8-3491] module 'calc_ctrl' declared at 'C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/calc_ctrl_.vhd:41' bound to instance 'i_calc_ctrl' of component 'calc_ctrl' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/calc_top_struc.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'calc_ctrl' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/calc_ctrl_rtl.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'calc_ctrl' (2#1) [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/calc_ctrl_rtl.vhd:50]
+INFO: [Synth 8-3491] module 'alu' declared at 'C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_.vhd:41' bound to instance 'i_alu' of component 'alu' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/calc_top_struc.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'alu' (3#1) [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'calc_top_struc_cfg' (4#1) [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/calc_top_struc_cfg.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 303.797 ; gain = 97.258
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 303.797 ; gain = 97.258
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/impl/calculator/calculator.srcs/constrs_1/new/calculator_constraints.xdc]
+Finished Parsing XDC File [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/impl/calculator/calculator.srcs/constrs_1/new/calculator_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/impl/calculator/calculator.srcs/constrs_1/new/calculator_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calc_top_struc_cfg_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/calc_top_struc_cfg_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 597.770 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 's_ss_sel_reg' in module 'io_ctrl'
+INFO: [Synth 8-5546] ROM "s_reg_pb0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_reg_pb1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_reg_pb2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_reg_pb3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_pbsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_ss_sel" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_ss_sel" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_reg_pb0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_reg_pb1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "s_reg_pb3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_pbsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_ss_sel" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_entrystate" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_entrystate" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dig0_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dig1_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dig2_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "optype_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 's_output_add_reg[error_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:154]
+INFO: [Synth 8-4471] merging register 's_output_add_reg[overflow_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:154]
+INFO: [Synth 8-4471] merging register 's_output_square_reg[sign_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:174]
+INFO: [Synth 8-4471] merging register 's_output_square_reg[error_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:174]
+INFO: [Synth 8-4471] merging register 's_output_not_reg[sign_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:209]
+INFO: [Synth 8-4471] merging register 's_output_not_reg[error_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:209]
+INFO: [Synth 8-4471] merging register 's_output_not_reg[overflow_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:209]
+INFO: [Synth 8-4471] merging register 's_output_not_reg[finished_o]' into 's_output_add_reg[finished_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:209]
+INFO: [Synth 8-4471] merging register 's_output_eor_reg[sign_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:229]
+INFO: [Synth 8-4471] merging register 's_output_eor_reg[error_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:229]
+INFO: [Synth 8-4471] merging register 's_output_eor_reg[overflow_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:229]
+INFO: [Synth 8-4471] merging register 's_output_eor_reg[finished_o]' into 's_output_add_reg[finished_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:229]
+INFO: [Synth 8-4471] merging register 's_output_not_implemented_reg[sign_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:249]
+INFO: [Synth 8-4471] merging register 's_output_not_implemented_reg[overflow_o]' into 's_output_add_reg[sign_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:249]
+INFO: [Synth 8-4471] merging register 's_output_not_implemented_reg[finished_o]' into 's_output_add_reg[finished_o]' [C:/Users/mathi/Desktop/FH_Technikum/Semester_4/CHIP1/Final_Project/calculator/vhdl/alu_rtl.vhd:249]
+INFO: [Synth 8-5544] ROM "s_operation" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "s_output_square[result_o]" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                            00001 |                             0000
+*
+                  iSTATE |                            00010 |                             1110
+                 iSTATE0 |                            00100 |                             1101
+                 iSTATE1 |                            01000 |                             1011
+                 iSTATE2 |                            10000 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_ss_sel_reg' using encoding 'one-hot' in module 'io_ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
++---XORs : 
+	   2 Input     12 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 6     
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
+	                5 Bit    Registers := 20    
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   6 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 9     
+	  10 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   5 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 28    
+	   6 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module io_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 20    
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 21    
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module calc_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 9     
+	  10 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 6     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
++---XORs : 
+	   2 Input     12 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_io_ctrl/s_swsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_alu/s_output_square[result_o]" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 597.770 ; gain = 391.230
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------+--------------------+---------------+----------------+
+|Module Name        | RTL Object         | Depth x Width | Implemented As | 
++-------------------+--------------------+---------------+----------------+
+|calc_ctrl          | v_7seg             | 32x8          | LUT            | 
+|calc_ctrl          | v_7seg             | 32x8          | LUT            | 
+|calc_ctrl          | v_7seg             | 32x8          | LUT            | 
+|calc_ctrl          | v_7seg             | 32x8          | LUT            | 
+|calc_ctrl          | v_7seg             | 32x8          | LUT            | 
+|calc_ctrl          | v_7seg             | 32x8          | LUT            | 
+|calc_ctrl          | v_7seg             | 32x8          | LUT            | 
+|calc_top_struc_cfg | i_calc_ctrl/v_7seg | 32x8          | LUT            | 
+|calc_top_struc_cfg | i_calc_ctrl/v_7seg | 32x8          | LUT            | 
+|calc_top_struc_cfg | i_calc_ctrl/v_7seg | 32x8          | LUT            | 
+|calc_top_struc_cfg | i_calc_ctrl/v_7seg | 32x8          | LUT            | 
+|calc_top_struc_cfg | i_calc_ctrl/v_7seg | 32x8          | LUT            | 
+|calc_top_struc_cfg | i_calc_ctrl/v_7seg | 32x8          | LUT            | 
+|calc_top_struc_cfg | i_calc_ctrl/v_7seg | 32x8          | LUT            | 
++-------------------+--------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][11]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][10]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][9]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][8]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][15]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_eor_reg[result_o][15]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_reg[result_o][15]' (FDCE) to 'i_alu/s_output_not_reg[result_o][12]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_add_reg[result_o][15]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][14]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_eor_reg[result_o][14]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_reg[result_o][14]' (FDCE) to 'i_alu/s_output_not_reg[result_o][12]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_add_reg[result_o][14]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][13]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_eor_reg[result_o][13]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_reg[result_o][13]' (FDCE) to 'i_alu/s_output_not_reg[result_o][12]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_add_reg[result_o][13]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][12]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_eor_reg[result_o][12]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][7]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][6]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][5]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][4]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][3]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][2]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][1]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3886] merging instance 'i_alu/s_output_not_implemented_reg[result_o][0]' (FDCE) to 'i_alu/s_output_add_reg[sign_o]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_alu/s_output_add_reg[sign_o] )
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/dig2_o_reg[0]' (FDPE) to 'i_calc_ctrl/dig1_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/dig1_o_reg[0]' (FDPE) to 'i_calc_ctrl/dig0_o_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_calc_ctrl/dig0_o_reg[0] )
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[0]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[1]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[2]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[3]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[4]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[5]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[6]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[7]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[8]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[9]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[10]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[11]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[12]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_calc_ctrl/led_o_reg[13]' (FDCE) to 'i_calc_ctrl/led_o_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_calc_ctrl/led_o_reg[14] )
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_reg[result_o][15]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_reg[result_o][14]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_reg[result_o][13]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_add_reg[sign_o]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[14]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[13]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[12]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[11]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[10]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[9]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[8]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[7]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[6]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[5]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[4]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[3]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[2]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[1]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/led_o_reg[0]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][11]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][10]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][9]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][8]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][15]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_eor_reg[result_o][15]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_add_reg[result_o][15]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][14]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_eor_reg[result_o][14]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_add_reg[result_o][14]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][13]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_eor_reg[result_o][13]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_add_reg[result_o][13]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][12]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_eor_reg[result_o][12]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][7]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][6]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][5]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][4]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][3]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][2]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][1]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_alu/s_output_not_implemented_reg[result_o][0]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/dig1_o_reg[0]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/dig2_o_reg[0]) is unused and will be removed from module calc_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_calc_ctrl/dig0_o_reg[0]) is unused and will be removed from module calc_top_struc_cfg.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 597.770 ; gain = 391.230
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 597.770 ; gain = 391.230
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |    12|
+|4     |LUT2   |    79|
+|5     |LUT3   |    47|
+|6     |LUT4   |    44|
+|7     |LUT5   |    39|
+|8     |LUT6   |   125|
+|9     |FDCE   |   253|
+|10    |FDPE   |    37|
+|11    |IBUF   |    22|
+|12    |OBUF   |    28|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+----------+------+
+|      |Instance      |Module    |Cells |
++------+--------------+----------+------+
+|1     |top           |          |   703|
+|2     |  i_alu       |alu       |   148|
+|3     |  i_calc_ctrl |calc_ctrl |   192|
+|4     |  i_io_ctrl   |io_ctrl   |   312|
++------+--------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 597.770 ; gain = 391.230
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 45 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 597.770 ; gain = 97.258
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 597.770 ; gain = 391.230
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+170 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 597.770 ; gain = 391.230
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 597.770 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May 26 17:44:30 2024...
